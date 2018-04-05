@@ -1,9 +1,30 @@
 <h1>Figures/People</h1>
 
-<ul>
-  <% @figures.each do |figure| %>
-  <li><%= figure.name %></li>
-  <% end %>
-</ul>
+
+<% @figures.each do |figure| %>
+  <h3><%= figure.name %></h3><br/>
+
+  <p> Landmarks: </p>
+  <%if figure.landmarks.length > 0%>
+    <ul>
+      <%figure.landmarks.each do |landmark|%>
+        <li><%=landmark.name%></li>
+      <%end%>
+    </ul>
+  <%end%>
+  <br/>
+
+  <p> Titles: </p>
+  <%if figure.titles.length > 0%>
+    <ul>
+      <%figure.titles.each do |title|%>
+        <li><%=title.name%></li>
+      <%end%>
+    </ul>
+  <%end%>
+
+
+<% end %>
+
 
 <a href="/figures/new"><button>New Figure</button></a>
