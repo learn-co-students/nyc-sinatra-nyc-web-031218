@@ -1,0 +1,14 @@
+<h1><%= @figure.name %></h1>
+<h3>Landmarks:</h3>
+<ul>
+<% @figure.landmarks.each do |landmark| %>
+  <li><%= landmark.name %></li>
+<% end %>
+</ul>
+
+<br/><br/>
+<a href="/figures/<%= @figure.id %>/edit"><button>Edit Figure</button></a>
+<form action="/figures/<%= @figure.id %>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Figure">
+</form>
