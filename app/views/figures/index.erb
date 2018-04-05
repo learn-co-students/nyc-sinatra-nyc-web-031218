@@ -5,7 +5,8 @@
     <title></title>
   </head>
   <body>
-    <%= @landmark.name %>
-    <%= @landmark.year_completed.to_s %>
+<%@figures.each{|figure| %>
+  <%= figure.name %>
+<% }  %>
   </body>
 </html>

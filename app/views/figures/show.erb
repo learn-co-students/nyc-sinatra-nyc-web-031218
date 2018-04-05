@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%= @figure.name %>
+    <% @figure.landmarks.each{|landmark| %>
+    <%= landmark.name %>
+    <% } %>
+    <% @figure.titles.each{|title| %>
+      <%= title.name %>
+    <% } %>  
+  </body>
+</html>

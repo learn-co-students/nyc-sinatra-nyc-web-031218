@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%= @landmark.year_completed.to_s %>
+    <form action="/landmarks/<%=@landmark.id%>" method="post">
+      <input type="text" name="landmark[name]" id=name value=""></input>
+    <label>year</label>  <input type="text" name="landmark[year_completed]" id="year_completed" value=""></input>
+      <input type="text" name="figure_id" value=""></input>
+      <%@figures.each do |figure|%>
+
+         <input type="checkbox" name="figure_id" value="<%=figure.id%>" id="<%=figure.id%>" </input>
+     <%end%>
+
+     <label>and/or, create a new figure:</label>
+         <br></br>
+         <label>name:</label>
+
+           <input  type="text" name="figure_name"></input>
+
+
+         <br></br>
+
+      <input type="submit" name="Edit Landmark" value="Edit Landmark"></input>
+    </form>
+
+  </body>
+</html>
