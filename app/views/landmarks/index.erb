@@ -1,0 +1,16 @@
+<h2> Index </h2>
+
+<ul>
+  <%@landmarks.each do |landmark|  %>
+
+    <li><%=landmark.name%></li>
+    <ul>
+      <li><%=landmark.id%></li>
+      <li><%=landmark.year_completed%></li>
+    </ul>
+
+
+  <% end %>
+</ul>
+
+<a href="/landmarks/new"><button>New landmark</button></a>
