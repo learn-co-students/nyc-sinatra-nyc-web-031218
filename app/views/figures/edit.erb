@@ -1,0 +1,15 @@
+
+<h2> Edit this Figure </h2>
+<form action="/figures/<%= @figure.id %>" method="post">
+  <input type="hidden" name="_method" value="PATCH"><br>
+  Figure Name: <input type="text" name="figure[name]" value="<%= @figure.name %>">
+  <input type="submit" value="Submit"> <br>
+</form>
+
+
+
+
+<form action="/figures/<%= @figure.id %>" method="post">
+   <input type="hidden" name="_method" value="DELETE"><br>
+  <input type="submit" value="Delete this Figure">
+</form>

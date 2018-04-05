@@ -1,0 +1,5 @@
+<h1> List of Landmarks </h1>
+<ul><% @landmarks.all.each do |landmark| %>
+      <li><a href= <%="landmarks/#{landmark.id}" %>><%= landmark.name %></a></li>
+      <% end %>
+</ul>
