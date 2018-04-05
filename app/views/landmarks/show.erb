@@ -2,9 +2,18 @@
   <tr>
     <th>Name</th>
     <th>Year Completed</th>
+    <th>Figure</th>
   </tr>
   <tr>
     <td><%= @landmark.name %></td>
     <td><%= @landmark.year_completed %></td>
+    <% if !(@figure == nil) %>
+      <td><%= @figure.name %></td>
+    <% else %>
+      <td>N/A</td>
+    <% end %>
   </tr>
+
 <table>
+
+<a href= <%= "#{ @landmark.id }/edit" %>>Edit Landmark</a>
