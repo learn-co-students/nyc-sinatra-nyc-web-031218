@@ -1,9 +1,17 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Year Completed</th>
+    <th>Figure Landmarks</th>
+    <th>Figure Titles</th>
+
   </tr>
   <tr>
     <td><%= @figure.name %></td>
+    <% @figure.landmarks.each do |fl| %>
+      <td> <%= fl.name %> </td>
+        <% end %>
+    <% @figure.titles.each do |ft| %>
+        <td> <%= ft.name %> </td>
+          <% end %>
   </tr>
 <table>
